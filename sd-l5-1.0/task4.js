@@ -1,23 +1,18 @@
-
 export class FriendAge {
-    constructor(nombre, año, mes, dia){
-        this.nombre = nombre;
-        this.año = año;
-        this.mes = mes;
-        this.dia = dia;
+    constructor(name, year, month, day){
+        this.name = name;
+        this.year = year;
+        this.month = month;
+        this.day = day;
     }
     returnAge() {
-    const hoy = new Date(); // Fecha actual
-    const fechaNacimiento = new Date(this.año, this.mes - 1, this.dia); // Mes es base 0
+        let today =new Date();
+        let birthday = new Date(this.year, this.month - 1, this.day);
+        let age =today.getFullYear() - birthday.getFullYear();
 
-    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-    cost diferenciames = hoy.getMonth() - fechaNacimiento.getMonth();
-    cost diferenciadia = hoy.getDate() - fechaNacimiento.getDate();
 
-    if (diferenciames < 0 || (diferenciames === 0 && diferenciadia < 0)) {
-        edad--;
-      }
-  
-      return `${this.nombre} is ${edad} hoy!`;
+        return `${this.name} is ${age} today!`;
     }
 }
+const friend = new FriendAge("Javiera", 2000, 12, 25);
+console.log(friend.returnAge()); 
