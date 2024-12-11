@@ -1,4 +1,4 @@
-export function rubricPassFail(puntos) {
+export function rubricPerfect(puntos) {
     puntos = parseInt(puntos);
     if(puntos === 11){
         return ("Perfect")

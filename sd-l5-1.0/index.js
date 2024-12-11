@@ -3,7 +3,7 @@
 // Your 7 tasks are located in separate files.
 // Open task1.js to begin.
 
-import * as task1 from "./task1.js";
+import * as task1 from "./task1.js"; //El as hace referencia de un alias
 import * as task2 from "./task2.js";
 import * as task3 from "./task3.js";
 import * as task4 from "./task4.js";

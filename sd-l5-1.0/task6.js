@@ -1,10 +1,11 @@
-export function rubricPassFail(puntos) {
-    puntos = parseInt(puntos);
-    if (puntos >= 5){
-        return ("Pass")
-    }
-    else if (puntos >=8) {
+export function rubricExcellent(puntos) {
+    puntos = parseFloat(puntos);
+    
+    if (puntos > 8){
         return ("Excellent")
+    }
+    else if (puntos >=5) {
+        return ("Pass")
     }
     else {
         return ("Fail")
